@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="counter">0</p>
+    <button id="stopBtn">Stop Count</button>
+    <p id="countText"></p>
+
+
+    <script>
+        // setTimeout(function(){
+        //     alert("Hello")
+        // }, 1000)
+
+        // Set interval
+
+        // let count = 0;
+
+        // setInterval(function(){
+        //     count++;
+        //     document.getElementById("counter").textContent = count;
+        // }, 1000)
+
+        let count = 0;
+        let stopBtn = document.getElementById("stopBtn")
+
+        const intervalId = setInterval(function(){
+            count++;
+            let counter = document.getElementById("counter").textContent = count;
+        },1000)
+
+        stopBtn.addEventListener("click", function(){
+            clearInterval(intervalId);
+            document.getElementById("countText").textContent = "Counting stop"
+        })
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Todo List</h1>
+
+    <!-- Input field -->
+    <input id="todoInput" type="text" placeholder="Enter a task">
+
+    <!-- Add button -->
+    <button id="addBtn">Add</button>
+
+    <!-- Todo list -->
+    <ul id="list"></ul>
+    
+  </div>
+
+  <script>
+    const todoInput = document.getElementById("todoInput")
+    const addBtn = document.getElementById("addBtn")
+    const list = document.getElementById("list")
+
+    // Load saveds todo
+    
+
+    addBtn.addEventListener("click", () =>{
+        const task = todoInput.value.trim();
+
+        if(task === "") return;
+
+        const li  = document.createElement("li")
+
+        li.innerHTML = `
+        <span>${task}</span>
+        <span class = "delete">X</span>
+        `
+
+        list.appendChild(li)
+        todoInput.value = ""
+    })
+
+
+    list.addEventListener("click", function(e) {
+        // if(e.target.tagName === "LI" || e.target.tagName === "SPAN"){
+        //     e.target.closest("li").classList.toggle("Completed")
+        // }
+
+        if(e.target.classList.contains("delete")){
+            e.target.parentElement.remove()
+        }
+    })
+  </script>
+</body>
+</html>

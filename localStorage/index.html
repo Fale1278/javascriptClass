@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <h1>Hello World</h1>
+    <button id="darkMode">Dark mode</button> -->
+
+    <p id="timer">0</p>
+    <button id="startBtn">Start</button>
+    <button id="resetBtn">Reset</button>
+    <script>
+        // let darkMode = document.getElementById("darkMode");
+        // localStorage.setItem("theme", "dark")
+
+        // const theme = localStorage.getItem("theme");
+
+        // darkMode.addEventListener("click", function(){
+        //     if (theme === "dark"){
+        //     document.body.style.background = "black";
+        //     document.body.style.color = "white";
+
+        //     darkMode.textContent = "Light mode"
+        // }
+        // })
+
+        // const task = ["study", "Pray", "Sleep"];
+
+        // // To save items
+        // localStorage.setItem("task", JSON.stringify(task))
+        
+        // const storedTasks = JSON.parse(localStorage.getItem("task"))
+        // console.log(storedTasks)
+        
+        const timerDisplay = document.getElementById("timer");
+        const startBtn = document.getElementById("startBtn");
+        const resetBtn = document.getElementById("resetBtn")
+
+        let seconds = localStorage.getItem("seconds") || 0;
+
+        timerDisplay.textContent = seconds;
+
+        let intervalId = null;
+        startBtn.addEventListener("click", function(){
+
+            if(intervalId !== null) return;
+
+            intervalId = setInterval(function(){
+            seconds++;
+            timerDisplay.textContent = seconds;
+
+            // Save to local storage
+            localStorage.setItem("seconds", seconds);
+           }, 1000)
+        })
+
+        resetBtn.addEventListener("click", function(){
+            clearInterval(intervalId);
+            intervalId = null
+
+            seconds = 0
+
+            timerDisplay.textContent = seconds
+            localStorage.removeItem("seconds")
+        })
+        
+    </script>
+</body>
+</html>

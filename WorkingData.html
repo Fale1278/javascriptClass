@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <h2>Hello</h2>
+
+        <div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia cum, aliquam vitae adipisci officiis placeat deleniti. Quod vitae deleniti dolor delectus, perferendis modi expedita iure ab eligendi porro ratione accusamus.
+        </div>
+    </div>
+    <script>
+        // String Concartenation - Basically Joining two or more strings together. +
+
+        // let fname = "King";
+        // let Sname = "Victor"
+
+        // let fullName = fname +" "+ Sname
+        // console.log(fullname)
+
+        // let age = 60;
+        // let message = "I am " + age + " years old"
+        // console.log(message)
+
+        // String Methods
+        // .lenth
+
+        // let word = "Jennifer";
+        // console.log(word.length);
+        
+        // // .toUppercase(), .toLowercase
+        // let subject = "javascript";
+        // console.log(subject.toUpperCase())
+
+        // // indexOf
+        // console.log(subject.indexOf("p"))
+
+        // // .slice() - to take a portion of
+        // console.log(subject.slice(0, 10))
+
+        // Accessing items in an Array
+        // let fruits = ["Mango", "Banana", "Orange"]
+
+        // // Array Positions
+        // console.log(fruits)
+        // console.log(fruits[2])
+
+        // // push() - To add an item to the end an Array
+        // fruits.push("Apple")
+        // console.log(fruits)
+
+        // // pop() - to remove an item from the end of an array
+        // fruits.pop()
+        // console.log(fruits)
+
+        // // splice() - to remove an item from any position
+        // fruits.splice(1, 2)
+        // console.log(fruits)
+
+        // // splice()
+        // fruits.splice(1, 2, "Grapes", "Guava")
+        // console.log(fruits)
+
+        // Objects
+        // let studentInfo = {
+        //     name: "Abraham",
+        //     age: 21,
+        //     course: "Computer Science",
+        //     isRegistered: true
+        // }
+
+        // console.log(studentInfo)
+        // console.log(studentInfo.name)
+        // console.log(studentInfo.course)
+
+        // studentInfo.age = 23;
+        // studentInfo.course = "Mathematics";
+        
+        // console.log(studentInfo)
+        // console.log(studentInfo.age)
+        // console.log(studentInfo.course)
+
+        // Assignment
+        /*
+            1. 
+                a. Create a variable called schoolName and assign your school name.
+                b. Display
+                    - the length of the school name
+                    - the school name in uppercase
+            
+            2. 
+                a. Create a variable, hasPaidFees
+                b. if hasPaidFees is true, display:
+
+                    " Access Granted"
+
+                c. Else Dispay:
+
+                    "Please pay your fees"
+            
+            3. Create an array of 5 items
+                a. Display:
+                    - the first item
+                    - the last item
+                b.  Remove the item at the third position
+
+            4. Create an object called person with:
+                - name
+                - age
+                - isStudent
+
+                - Change the value of age and display the whole object
+        */
+
+        //    Conditional Statements -Logical Opertors
+        // let age = 17;
+        // let hasId = false;
+
+        // if(age >= 18 && hasId){
+        //     alert("You can vote.")
+        // }
+
+        // else{
+        //     alert("You are not eligible.")
+        // }
+
+        // Nested Conditons - nested ifs
+
+        // let isStudent = true;
+        // let hasPaid = false;
+
+        // if(isStudent){
+        //     if(hasPaid){
+        //         alert("Acces granted.")
+        //     }
+        //     else{
+        //         alert("Please pay us.")
+        //     }
+        // }
+
+        // else{
+        //     alert("You are not a student.")
+        // }
+
+        // Conditional Statements - ternary operators
+        // let age = 17;
+        // let mesage = age >= 18 ? "adult" : "minor"
+        // alert(mesage)
+
+        // Conditional Statements - Switch  statements
+        // let day = "Wednesday";
+
+        // switch(day){
+        //     case "Monday":
+        //     case "Friday":
+        //         alert("Go to class");
+        //         break;
+
+        //     case "Tuesday" :
+        //     case "Wednesday":
+        //     case "Thursday":
+        //         alert("Go to Church")
+        //         break;
+
+        //     default:
+        //         alert("Pick a day")
+        // } 
+
+        // Conditional Statements - Logic with arrays and Objects
+        // let user = {
+        //     name: "Victor",
+        //     role: "admin"
+        // };
+
+        // console.log(user.role)
+
+        // if(user.role === "admin"){
+        //     console.log("Access granted")
+        // } 
+        // else if(user.role === "student"){
+        //     console.log("This is not a student portal")
+        // }
+        // else{
+        //     console.log("You have no access")
+        // }
+        
+        // let user ={
+        //     name: "Musa",
+        //     hasAccount : true,
+        //     creditScore: 400,
+        //     salary: 50000
+        // }
+
+        // if(user.hasAccount && user.creditScore >= 500 && user.salary >= 60000){
+        //     console.log("Loan Approved: You meet our requirements for 5Million")
+        // }
+
+        // else if(user.hasAccount && user.creditScore >= 450 && user.salary >= 40000){
+        //     console.log("Loan Approved: You meet our requirements for 2Million")
+        // }
+
+        // else if(user.hasAccount){
+        //     console.log("Loan Approved: You can only get 500k and below")
+        // }
+
+        // else{
+        //     console.log("Loan Denied.")
+        // }
+
+        /*
+            1. Write a program that checks if a a number is odd or even
+            2. Write a program that showcases the use of ternary operators
+            3. Write a program that checks if a year is a leap year
+                - Leap year if divisible by 4
+                - but not divisible by 100
+                - unless divisilble by 400
+        */
+        let number = 12
+
+        if(number % 2 === 0){
+            console.log("Even")
+        }
+        else{
+            console.log("Odd")
+        }
+
+        // Q3
+        let year = 2000;
+
+        // if (year % 400 === 0) {
+        // console.log("Leap Year");
+        // } else if (year % 100 === 0) {
+        // console.log("Not a Leap Year");
+        // } else if (year % 4 === 0) {
+        // console.log("Leap Year");
+        // } else {
+        // console.log("Not a Leap Year");
+        // }
+
+        if((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0){
+            console.log("Leap year")
+        }
+        else{
+            console.log("Not a leap year.")
+        }
+
+
+        let username = "king";
+        let password = "1234";
+
+        if(username === "king" && password === "1234"){
+            console.log("Login Successful.");
+        }
+        else{
+            console.log("Wrong Login Credentials")
+        }
+
+
+    </script>
+</body>
+</html>

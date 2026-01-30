@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- <h1 id="heading">This is heading</h1>
+    <p class="para">This is a paragraph</p> -->
+
+
+    <!-- <button id="btn">Click me</button> -->
+
+
+    <form id="myform">
+        <input type="text" id="username">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // const heading = document.getElementById("heading");
+        // const para = document.querySelector(".para")
+        
+        // heading.textContent = "Welcome to Javascript class!";
+        // heading.style.color = "red";
+        // heading.style.backgroundColor = "pink"
+        // para.textContent = "Change the paragraph "
+        
+        // const newPara = document.createElement("h1")
+        // newPara.textContent = "This is a new Paragraph";
+
+        // document.body.appendChild(newPara)
+
+        // const btn = document.createElement("button");
+        // btn.textContent = "Click Me";
+
+        // document.body.appendChild(btn)
+
+        // const btn = document.getElementById("btn")
+
+        // btn.addEventListener("click", function(){
+        //     btn.textContent = "Button Clicked"
+        // })
+
+        const form = document.getElementById("myform");
+
+        form.addEventListener("submit", function(event){
+            event.preventDefault()
+
+            const username = document.getElementById("username").value;
+            alert("Hello " + username)
+        })
+
+
+        
+
+    </script>
+</body>
+</html>
