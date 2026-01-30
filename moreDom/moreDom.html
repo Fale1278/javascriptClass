@@ -14,17 +14,41 @@
 </head>
 <body>
 
-    <button id="toggleBtn">Toggle Highlight</button>
-    <p id="text">Watch me change</p>
+    <!-- <button id="toggleBtn">Toggle Highlight</button>
+    <p id="text">Watch me change</p> -->
+
+    <!-- Creating Elements Dynamically -->
+     <button id="addBtn">Add Item</button>
+     <ul id="list"></ul>
 
     <script>
 
-        const toggleBtn = document.getElementById("toggleBtn");
-        const text = document.getElementById("text");
+        // const toggleBtn = document.getElementById("toggleBtn");
+        // const text = document.getElementById("text");
 
-        toggleBtn.addEventListener("click", function(){
-            text.classList.toggle("highlight")
-        });
+        // toggleBtn.addEventListener("click", function(){
+        //     text.classList.toggle("highlight")
+        // });
+
+        // Creating Elements Dynamically
+        const addbtn = document.getElementById("addBtn");
+        const list = document.getElementById("list");
+
+        addbtn.addEventListener("click", function(){
+            const li = document.createElement("li");
+            const re = document.createElement("re")
+            li.innerHTML =  `
+            <span> New Item </span>
+            <span class ="remove"> x </span>`
+            list.appendChild(li)
+        })
+
+        list.addEventListener("click", function(e){
+            if(e.target.classList.contains("remove")){
+                e.target.parentElement.remove()
+            }
+        })
+
     </script>
     
 </body>

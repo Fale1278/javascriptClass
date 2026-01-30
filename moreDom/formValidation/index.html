@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <form id="form">
+        <input id="email" placeholder="Email">
+        <button>submit</button>
+    </form>
+    <p id="error"></p>
+
+    <script>
+        const form = document.getElementById("form");
+        const email = document.getElementById("email");
+        const error = document.getElementById("error");
+
+        form.addEventListener("submit", function(e){
+            e.preventDefault();
+
+            if(!email.value.includes("@")){
+                error.textContent = "Please enter a valid email."
+            }
+
+            else{
+                error.textContent = "Submitted Successfully"
+            }
+        })
+    </script>
+</body>
+</html>

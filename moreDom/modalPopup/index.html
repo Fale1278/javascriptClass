@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .hidden{
+        display: none;
+    }
+</style>
+<body>
+    
+    <button id="openModal">Open</button>
+
+    <div id="modal" class="hidden">
+        <p>Hello this is a Popup Modal</p>
+        <button id="closeModal">Close</button>
+    </div>
+
+    <script>
+        const modal = document.getElementById("modal");
+        const openModal = document.getElementById("openModal");
+        const closeModal = document.getElementById("closeModal");
+
+        openModal.addEventListener("click", function(){
+            modal.classList.remove("hidden");
+        })
+
+        closeModal.addEventListener("click", function(){
+            modal.classList.add("hidden");
+        })
+    </script>
+</body>
+</html>
