@@ -1,12 +1,154 @@
-.completed{
-    text-decoration: line-through;
-    color: gray;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
 
-li{
-    margin: 8px 0;
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-button{
-    margin-left: 5px;
+/* MAIN CONTAINER */
+.todo-app {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* TITLE */
+.todo-app h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* INPUT AREA */
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.input-area input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.input-area button {
+  background: #667eea;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.input-area button:hover {
+  background: #5563d6;
+}
+
+/* FILTER BUTTONS */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.filters button {
+  flex: 1;
+  margin: 0 4px;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.filters button:hover {
+  background: #ddd;
+}
+
+/* TASK LIST */
+ul {
+  list-style: none;
+}
+
+li {
+  background: #f7f7f7;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+li:hover {
+  transform: scale(1.02);
+}
+
+/* COMPLETED TASK */
+li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+  background: #d4edda;
+}
+
+/* BUTTONS INSIDE TASK */
+li button {
+  margin-left: 5px;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+li button:first-of-type {
+  background: #ffc107;
+}
+
+li button:last-of-type {
+  background: #dc3545;
+  color: white;
+}
+
+li button:hover {
+  opacity: 0.8;
+}
+
+/* CLEAR COMPLETED */
+#clearCompleted {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#clearCompleted:hover {
+  background: #c82333;
 }
